@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="recordbar">
+    鍵盤 <span class="em">A~L </span>操作、滑鼠<span class="em"> 點擊 </span>為節拍器<br>
+    按下 <span class="em">R</span> 開始 / 終止錄節奏<br>
+    錄完之後，按下 <span class="em">P</span> 播放，或者留下
+    <input id="name" type="text" placeholder="你的名字"><button id="upload">儲存</button>
+
+  </div>
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+
+    <div id="metronomeSlider">
+      <div data-key="65" class="slider">CLAP</div>
+      <div data-key="83" class="slider">HIHAT</div>
+      <div data-key="68" class="slider">KICK</div>
+      <div data-key="70" class="slider">OPENHAT</div>
+      <div data-key="71" class="slider">BOOM</div>
+      <div data-key="72" class="slider">RIDE</div>
+      <div data-key="74" class="slider">SNARE</div>
+      <div data-key="75" class="slider">TOM</div>
+      <div data-key="76" class="slider">TINK</div>
+    </div>
+
+    <div id="load">
+      
+    </div>
+
+  </div>
+
+  
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+</body>
+<script src="drum.js"></script>
+</html>
